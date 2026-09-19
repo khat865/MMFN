@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MMFN studies whether multimodal large language models can generate and detect social-media fake news.">
+  <meta name="theme-color" content="#111918">
+  <meta name="color-scheme" content="light">
+  <meta property="og:title" content="MMFN — Multimodal Fake News Generation & Detection">
+  <meta property="og:description" content="A paired benchmark and multi-agent framework for studying multimodal social-media misinformation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://khat865.github.io/MMFN/">
+  <link rel="canonical" href="https://khat865.github.io/MMFN/">
+  <title>MMFN — Multimodal Fake News Generation & Detection</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="MMFN home">
+        <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+          <path d="M7 9.5h20v20H7z"></path>
+          <path d="M17 14.5h20v20H17z"></path>
+          <circle cx="31" cy="20.5" r="2.5"></circle>
+          <path d="m20 30 5.3-5.4 4.2 3.8 3.4-3.4"></path>
+        </svg>
+        <span>MMFN</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#framework">Method</a>
+        <a href="#findings">Findings</a>
+        <a href="https://github.com/xiuzhenzhang/Multimodal" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="#access">Access</a>
+      </nav>
+
+      <a class="nav-cta" href="assets/mmfn-paper.pdf" target="_blank" rel="noopener">Read paper <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <div class="status-line">
+          <span class="status-group"><span class="status-dot"></span>Research project · 2026</span>
+          <span class="status-rule"></span>
+          <span>Dataset gated · manual review</span>
+        </div>
+        <h1 id="hero-title">Can MLLMs generate—and <em>detect</em>—multimodal fake news?</h1>
+        <p class="hero-lede">
+          A paired benchmark and multi-agent framework for realistic text–image misinformation—and the models asked to detect it.
+        </p>
+        <p class="authors">
+          Jiyao Yang · Yang Liu · Zhenyue Qin · Qingyu Chen · Xiuzhen Zhang<sup>*</sup>
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="assets/mmfn-paper.pdf" target="_blank" rel="noopener">
+            <span>Read the paper</span><span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button-secondary" href="https://huggingface.co/datasets/Khat865/Mutilmodel_fake_news" target="_blank" rel="noopener">
+            <span>Request dataset &amp; code</span><span aria-hidden="true">→</span>
+          </a>
+          <button class="text-button" type="button" data-open-citation>Copy citation</button>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="A conceptual view of the multimodal fake-news benchmark">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="signal-label signal-label-top">text signal</div>
+        <div class="signal-label signal-label-bottom">visual signal</div>
+
+        <article class="post-card post-card-true">
+          <div class="post-card-head">
+            <span class="avatar">N</span>
+            <span><b>Source event</b><small>verified report</small></span>
+            <span class="post-badge">TRUE</span>
+          </div>
+          <div class="post-image source-image">
+            <svg viewBox="0 0 260 110" aria-hidden="true">
+              <circle cx="194" cy="32" r="13"></circle>
+              <path d="M21 89 80 37l42 37 32-25 85 40H21Z"></path>
+            </svg>
+          </div>
+          <div class="post-lines"><i></i><i></i><i></i></div>
+        </article>
+
+        <div class="agent-core">
+          <span>critic</span>
+          <svg viewBox="0 0 56 56" aria-hidden="true">
+            <circle cx="28" cy="28" r="18"></circle>
+            <path d="m20 28 5 5 11-12"></path>
+          </svg>
+          <small>revise · verify</small>
+        </div>
+
+        <article class="post-card post-card-fake">
+          <div class="post-card-head">
+            <span class="avatar">A</span>
+            <span><b>Counter narrative</b><small>generated post</small></span>
+            <span class="post-badge">FAKE</span>
+          </div>
+          <div class="post-image synthetic-image">
+            <svg viewBox="0 0 260 110" aria-hidden="true">
+              <path d="M18 88 67 29l47 54 37-43 91 48H18Z"></path>
+              <path d="m204 17 2.8 7.2 7.2 2.8-7.2 2.8-2.8 7.2-2.8-7.2-7.2-2.8 7.2-2.8 2.8-7.2Z"></path>
+            </svg>
+          </div>
+          <div class="post-lines"><i></i><i></i><i></i></div>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="metric-band" id="overview" aria-label="Study at a glance">
+      <div class="section-shell metric-grid">
+        <article class="metric reveal">
+          <strong>4,507</strong>
+          <span>source events</span>
+        </article>
+        <article class="metric reveal">
+          <strong>3</strong>
+          <span>news domains</span>
+        </article>
+        <article class="metric reveal">
+          <strong>16</strong>
+          <span>MLLMs evaluated</span>
+        </article>
+        <article class="metric reveal">
+          <strong>2</strong>
+          <span>prompting protocols</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="framework section-pad" id="framework">
+      <div class="section-shell">
+        <div class="section-index reveal">01 / Method</div>
+        <div class="section-head reveal">
+          <h2 class="section-title">A collaborative generation loop.</h2>
+          <p>Specialized agents preserve event anchors, construct a counter-narrative, create supporting visuals, and review the result.</p>
+        </div>
+
+        <div class="pipeline reveal" aria-label="Multi-agent construction framework">
+          <article class="pipeline-node source-node">
+            <span class="node-number">00</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 4h13l5 5v19H7z"></path><path d="M20 4v6h6M11 15h10M11 20h10"></path></svg>
+            </div>
+            <h3>Source event</h3>
+            <p>Copyright-free reporting supplies the factual anchors.</p>
+          </article>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <article class="pipeline-node">
+            <span class="node-number">01</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 25 8 10l8-5 8 5 2 15-10 3z"></path><path d="M11 14h10M11 19h7"></path></svg>
+            </div>
+            <h3>Story agent</h3>
+            <p>Reframes a central claim while keeping the event recognizable.</p>
+          </article>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <article class="pipeline-node">
+            <span class="node-number">02</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="20" rx="2"></rect><circle cx="22" cy="12" r="2"></circle><path d="m7 23 7-8 5 5 3-3 6 6"></path></svg>
+            </div>
+            <h3>Visual producer</h3>
+            <p>Selects a visual strategy and synthesizes a matching image.</p>
+          </article>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <article class="pipeline-node critic-node">
+            <span class="node-number">03</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="14" cy="14" r="8"></circle><path d="m20 20 7 7M10 14l3 3 5-6"></path></svg>
+            </div>
+            <h3>Critic agent</h3>
+            <p>Checks plausibility, cross-modal fit, format, and visual quality.</p>
+            <span class="loop-label">iterate until approved</span>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="findings section-pad" id="findings">
+      <div class="section-shell">
+        <div class="section-index light reveal">02 / Findings</div>
+        <div class="findings-head reveal">
+          <h2>Detection is not solved.<br><em>Reasoning alone is not enough.</em></h2>
+          <p>The evaluation goes beyond a final true/fake label to examine the evidence models use—and where it diverges from human judgment.</p>
+        </div>
+
+        <div class="finding-grid">
+          <article class="finding-card reveal">
+            <span>01</span>
+            <h3>Human–model gap</h3>
+            <p>Most evaluated MLLMs remain substantially behind expert human judgments on multimodal news veracity.</p>
+          </article>
+          <article class="finding-card reveal">
+            <span>02</span>
+            <h3>Visual authenticity</h3>
+            <p>Models may align images with text while still failing to determine whether the visual itself is authentic.</p>
+          </article>
+          <article class="finding-card reveal">
+            <span>03</span>
+            <h3>Uneven CoT effects</h3>
+            <p>Structured reasoning improves many models but can also amplify model-specific bias and shift decision boundaries.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="access section-shell section-pad" id="access">
+      <div class="access-card reveal">
+        <div class="access-copy">
+          <span class="access-label"><i></i> Gated research access</span>
+          <h2>Paper, data, and code.</h2>
+          <p>Because the release contains misinformation-style material and construction code, access is reviewed manually for legitimate research use.</p>
+          <div class="access-actions">
+            <a class="button button-light" href="https://huggingface.co/datasets/Khat865/Mutilmodel_fake_news" target="_blank" rel="noopener">Request access <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline-light" href="assets/mmfn-paper.pdf">Read paper <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="access-side">
+          <div class="gate-note">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+            <span><strong>Manual approval</strong>Sign in to Hugging Face, accept the terms, and submit your request.</span>
+          </div>
+          <div class="resource-list" aria-label="Available research resources">
+            <span>Benchmark data</span><span>Construction code</span><span>Evaluation prompts</span>
+          </div>
+          <details class="citation-drawer" id="citation">
+            <summary>Show BibTeX citation <span aria-hidden="true">＋</span></summary>
+            <pre><code id="citation-code">@misc{yang2026multimodalfakenews,
+  title  = {Can Multimodal Large Language Models Generate and Detect
+            Multimodal Social Media Fake News?},
+  author = {Yang, Jiyao and Liu, Yang and Qin, Zhenyue and
+            Chen, Qingyu and Zhang, Xiuzhen},
+  year   = {2026}
+}</code></pre>
+            <button class="copy-button" type="button" data-copy-citation><span>Copy BibTeX</span><span aria-hidden="true">⧉</span></button>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-grid">
+      <div><a class="brand footer-brand" href="#top">MMFN</a><p>Multimodal fake-news generation and detection research.</p></div>
+      <div class="footer-links"><a href="assets/mmfn-paper.pdf" target="_blank" rel="noopener">Paper</a><a href="https://github.com/xiuzhenzhang/Multimodal" target="_blank" rel="noopener">GitHub</a><a href="https://huggingface.co/datasets/Khat865/Mutilmodel_fake_news" target="_blank" rel="noopener">Dataset &amp; code</a><a href="#citation">Citation</a></div>
+      <p class="footer-meta">Research use only · <span id="current-year">2026</span></p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true">Citation copied</div>
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -286,6 +286,8 @@ section[id], #access-conditions, #citation { scroll-margin-top: 90px; }
 .access-label i { width: 7px; height: 7px; background: var(--acid); border-radius: 50%; box-shadow: 0 0 0 5px rgba(217,241,117,.16); }
 .access-copy h2 { max-width: 580px; margin: 24px 0 18px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(45px,5vw,68px); font-weight: 500; letter-spacing: -.045em; line-height: 1; }
 .access-copy p { max-width: 570px; margin: 0; color: rgba(255,255,255,.8); font-size: 16px; line-height: 1.7; }
+.access-copy .access-notice { margin-top: 20px; padding: 14px 16px; color: var(--white); background: rgba(17,25,24,.14); border: 1px solid rgba(255,255,255,.3); border-radius: 12px; font-size: 13px; line-height: 1.65; }
+.access-notice strong { display: block; margin-bottom: 4px; }
 .button-light { width: fit-content; margin-top: 32px; color: var(--ink); background: var(--white); border-color: var(--white); }
 .button-light:hover { color: var(--white); background: var(--ink); border-color: var(--ink); }
 .access-actions { display: flex; flex-wrap: wrap; gap: 10px; }

@@ -49,6 +49,11 @@ function closeMenu() {
   siteNav.classList.remove("open");
   menuButton.setAttribute("aria-expanded", "false");
   menuText.textContent = "Open navigation";
+  updateMenuAccess();
+}
+
+function updateMenuAccess() {
+  siteNav.inert = window.innerWidth <= 760 && menuButton.getAttribute("aria-expanded") !== "true";
 }
 
 menuButton.addEventListener("click", () => {
@@ -56,17 +61,23 @@ menuButton.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", String(!open));
   siteNav.classList.toggle("open", !open);
   menuText.textContent = open ? "Open navigation" : "Close navigation";
+  updateMenuAccess();
 });
 
 siteNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeMenu();
+  if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+    closeMenu();
+    menuButton.focus();
+  }
 });
 window.addEventListener("resize", () => {
   document.documentElement.dataset.viewport = `${window.innerWidth}x${window.innerHeight}`;
   if (window.innerWidth > 760) closeMenu();
+  else updateMenuAccess();
 });
 window.addEventListener("scroll", updateHeader, { passive: true });
+updateMenuAccess();
 updateHeader();
 
 let toastTimer;

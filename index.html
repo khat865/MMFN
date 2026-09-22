@@ -41,7 +41,7 @@
         <a href="#framework">Method</a>
         <a href="#findings">Findings</a>
         <a href="https://github.com/xiuzhenzhang/Multimodal" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
-        <a href="#access">Access</a>
+        <a href="#access">Access &amp; terms</a>
       </nav>
 
       <a class="nav-cta" href="assets/mmfn-paper.pdf" target="_blank" rel="noopener">Read paper <span aria-hidden="true">↗</span></a>
@@ -67,58 +67,24 @@
           <a class="button button-primary" href="assets/mmfn-paper.pdf" target="_blank" rel="noopener">
             <span>Read the paper</span><span aria-hidden="true">↗</span>
           </a>
-          <a class="button button-secondary" href="https://huggingface.co/datasets/Khat865/Mutilmodel_fake_news" target="_blank" rel="noopener">
-            <span>Request dataset &amp; code</span><span aria-hidden="true">→</span>
+          <a class="button button-secondary" href="#access">
+            <span>Dataset &amp; code access</span><span aria-hidden="true">↓</span>
           </a>
           <button class="text-button" type="button" data-open-citation>Copy citation</button>
         </div>
       </div>
 
-      <div class="hero-visual reveal" aria-label="A conceptual view of the multimodal fake-news benchmark">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="signal-label signal-label-top">text signal</div>
-        <div class="signal-label signal-label-bottom">visual signal</div>
-
-        <article class="post-card post-card-true">
-          <div class="post-card-head">
-            <span class="avatar">N</span>
-            <span><b>Source event</b><small>verified report</small></span>
-            <span class="post-badge">TRUE</span>
-          </div>
-          <div class="post-image source-image">
-            <svg viewBox="0 0 260 110" aria-hidden="true">
-              <circle cx="194" cy="32" r="13"></circle>
-              <path d="M21 89 80 37l42 37 32-25 85 40H21Z"></path>
-            </svg>
-          </div>
-          <div class="post-lines"><i></i><i></i><i></i></div>
-        </article>
-
-        <div class="agent-core">
-          <span>critic</span>
-          <svg viewBox="0 0 56 56" aria-hidden="true">
-            <circle cx="28" cy="28" r="18"></circle>
-            <path d="m20 28 5 5 11-12"></path>
-          </svg>
-          <small>revise · verify</small>
-        </div>
-
-        <article class="post-card post-card-fake">
-          <div class="post-card-head">
-            <span class="avatar">A</span>
-            <span><b>Counter narrative</b><small>generated post</small></span>
-            <span class="post-badge">FAKE</span>
-          </div>
-          <div class="post-image synthetic-image">
-            <svg viewBox="0 0 260 110" aria-hidden="true">
-              <path d="M18 88 67 29l47 54 37-43 91 48H18Z"></path>
-              <path d="m204 17 2.8 7.2 7.2 2.8-7.2 2.8-2.8 7.2-2.8-7.2-7.2-2.8 7.2-2.8 2.8-7.2Z"></path>
-            </svg>
-          </div>
-          <div class="post-lines"><i></i><i></i><i></i></div>
-        </article>
-      </div>
+      <aside class="research-release reveal" aria-labelledby="release-title">
+        <span class="release-eyebrow">Research resources</span>
+        <h2 id="release-title">Access with<br><em>accountability.</em></h2>
+        <ul class="release-resources">
+          <li><span>01</span>Synthetic research data</li>
+          <li><span>02</span>Construction &amp; evaluation code</li>
+          <li><span>03</span>Prompts &amp; research documentation</li>
+        </ul>
+        <p>One application on Hugging Face. Individual approval for non-commercial research.</p>
+        <a class="release-link" href="#access">Read the access conditions <span aria-hidden="true">↓</span></a>
+      </aside>
 
     </section>
 
@@ -158,7 +124,7 @@
               <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 4h13l5 5v19H7z"></path><path d="M20 4v6h6M11 15h10M11 20h10"></path></svg>
             </div>
             <h3>Source event</h3>
-            <p>Copyright-free reporting supplies the factual anchors.</p>
+            <p>Published reporting supplies the factual anchors. Original source material is not redistributed.</p>
           </article>
           <div class="pipeline-arrow" aria-hidden="true">→</div>
           <article class="pipeline-node">
@@ -223,45 +189,85 @@
     </section>
 
     <section class="access section-shell section-pad" id="access">
+      <div class="section-index reveal">03 / Research access</div>
       <div class="access-card reveal">
         <div class="access-copy">
           <span class="access-label"><i></i> Gated research access</span>
-          <h2>Paper, data, and code.</h2>
-          <p>Because the release contains misinformation-style material and construction code, access is reviewed manually for legitimate research use.</p>
+          <h2>One request.<br>Data and code.</h2>
+          <p>Access is limited to non-commercial academic, educational, and scientific research, including reproduction and evaluation. Read the conditions below, then apply through Hugging Face. Each request is reviewed manually.</p>
           <div class="access-actions">
             <a class="button button-light" href="https://huggingface.co/datasets/Khat865/Mutilmodel_fake_news" target="_blank" rel="noopener">Request access <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline-light" href="assets/mmfn-paper.pdf">Read paper <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline-light" href="#access-conditions">Read conditions <span aria-hidden="true">↓</span></a>
           </div>
         </div>
         <div class="access-side">
           <div class="gate-note">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
-            <span><strong>Manual approval</strong>Sign in to Hugging Face, accept the terms, and submit your request.</span>
+            <span><strong>Individual, manual approval</strong>Approval covers the released data and code for your account. Collaborators must apply separately.</span>
           </div>
           <div class="resource-list" aria-label="Available research resources">
-            <span>Benchmark data</span><span>Construction code</span><span>Evaluation prompts</span>
+            <span>Synthetic data</span><span>Construction code</span><span>Evaluation code &amp; prompts</span>
           </div>
           <details class="citation-drawer" id="citation">
             <summary>Show BibTeX citation <span aria-hidden="true">＋</span></summary>
-            <pre><code id="citation-code">@misc{yang2026multimodalfakenews,
+            <pre><code id="citation-code">@inproceedings{yang2026multimodalfakenews,
   title  = {Can Multimodal Large Language Models Generate and Detect
             Multimodal Social Media Fake News?},
   author = {Yang, Jiyao and Liu, Yang and Qin, Zhenyue and
             Chen, Qingyu and Zhang, Xiuzhen},
+  booktitle = {Proceedings of EMNLP 2026},
   year   = {2026}
 }</code></pre>
             <button class="copy-button" type="button" data-copy-citation><span>Copy BibTeX</span><span aria-hidden="true">⧉</span></button>
           </details>
         </div>
       </div>
+
+      <div class="access-details">
+        <div class="application-guide reveal" aria-labelledby="apply-title">
+          <span class="detail-eyebrow">How to apply</span>
+          <h3 id="apply-title">A short application.<br>A human review.</h3>
+          <ol class="application-steps">
+            <li><strong>Sign in to Hugging Face.</strong>Open the gated repository using your own account and select the access request option. Hugging Face shares your username and account email with the reviewers.</li>
+            <li><strong>Tell us who you are and your intended use.</strong>Provide your full name, university or institution, institutional email, a public university profile or ORCID link, and a brief description of your intended research use. A detailed research proposal is not required.</li>
+            <li><strong>Accept the conditions and submit.</strong>Hugging Face records your request and sends an email notification to the reviewers. If a notification is delayed, your request remains in the review queue. Reviewers may contact your institutional email to confirm your affiliation.</li>
+            <li><strong>Return to the same repository.</strong>Use the same Hugging Face account to check your request status and, once approved, download the released data and code. Submitting an application does not itself grant access.</li>
+          </ol>
+          <p class="identity-note">Identity and affiliation are checked manually. Providing an email address or profile link does not by itself verify either.</p>
+          <p class="access-contact">Questions about an application?<br><a href="mailto:xiuzhen.zhang@rmit.edu.au">xiuzhen.zhang@rmit.edu.au</a></p>
+        </div>
+
+        <div class="access-conditions reveal" id="access-conditions" aria-labelledby="conditions-title">
+          <span class="detail-eyebrow">Before requesting access</span>
+          <h3 id="conditions-title">Conditions of use</h3>
+          <ol class="conditions-list">
+            <li><strong>Non-commercial research only.</strong>The resources are limited to the approved academic, educational, or scientific research purpose. Commercial use is prohibited, including product development, commercial services, internal business operations, and monetization through third parties. Provide accurate identity, affiliation, and intended-use information; contact the project team before changing your research purpose.</li>
+            <li><strong>Keep access personal and controlled.</strong>Approval applies to the named applicant. Do not redistribute, sell, share, mirror, host, or transfer the code, data, derived unencrypted subsets, archives, passwords, credentials, tokens, or access links to third parties, public repositories, or external platforms. Each collaborator must obtain their own access through an individual request. Do not bypass the access controls.</li>
+            <li><strong>Do not use the resources to mislead or cause harm.</strong>Do not present synthetic content as authentic reporting or use it for deception, impersonation, targeted persuasion, harassment, fraud, election interference, or operational misinformation. Do not use the resources to target or harm individuals or groups.</li>
+            <li><strong>Protect the materials.</strong>Use secure storage and named-user access controls. Report suspected loss, disclosure, or unauthorized access promptly to <a href="mailto:xiuzhen.zhang@rmit.edu.au">xiuzhen.zhang@rmit.edu.au</a>.</li>
+            <li><strong>Make research outputs traceable.</strong>Cite the paper and dataset/code revision. Clearly label synthetic or altered material, retain provenance and safety notices, and disclose material filtering, relabeling, preprocessing, and other changes.</li>
+            <li><strong>Publish findings responsibly.</strong>Aggregate results and limited excerpts necessary for scientific review may be published under the research license. Outputs must not substitute for the dataset, allow reconstruction of a substantial part of it, reveal access information, or facilitate harmful reuse.</li>
+            <li><strong>Respect source rights.</strong>Original news articles, original source images, and true-post texts are excluded from the release. Obtain any required third-party materials independently under their applicable terms. Access does not transfer rights held by publishers, authors, or other parties.</li>
+            <li><strong>Follow review and retention decisions.</strong>The team may request clarification, decline a request, or suspend or revoke access. Stop using and securely delete local, server, cloud, cache, and backup copies when the approved research period ends or access is revoked, subject to legally required retention.</li>
+          </ol>
+          <p class="terms-note">Access is subject to the <a href="https://huggingface.co/datasets/Khat865/Mutilmodel_fake_news/blob/main/LICENSE" target="_blank" rel="noopener">research use license</a> and <a href="https://huggingface.co/datasets/Khat865/Mutilmodel_fake_news/blob/main/DATA_USE_AGREEMENT.md" target="_blank" rel="noopener">data use agreement</a>. The materials are provided as-is and may contain errors or misleading content; approval does not endorse the applicant or their research.</p>
+        </div>
+      </div>
+
+      <aside class="release-scope reveal" aria-labelledby="scope-title">
+        <span class="detail-eyebrow">Release scope &amp; reproducibility</span>
+        <h3 id="scope-title">Synthetic resources, with a clear boundary.</h3>
+        <p>The Hugging Face release contains synthetic research material, construction and evaluation code, prompts, and supporting documentation. It excludes original true-news articles, original source images, and true-post texts, including copies embedded in construction records.</p>
+        <p>The paper evaluates both true and fake news. The synthetic-only release cannot independently reproduce the full two-class results. Exact reproduction requires the original evaluation inputs and protocol; retrieving an article from its source URL does not guarantee reconstruction of the same true-post text. Source metadata supports independent acquisition under the source terms, but it is not a substitute for those withheld inputs. Report results on the released subset as subset results.</p>
+      </aside>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="section-shell footer-grid">
       <div><a class="brand footer-brand" href="#top">MMFN</a><p>Multimodal fake-news generation and detection research.</p></div>
-      <div class="footer-links"><a href="assets/mmfn-paper.pdf" target="_blank" rel="noopener">Paper</a><a href="https://github.com/xiuzhenzhang/Multimodal" target="_blank" rel="noopener">GitHub</a><a href="https://huggingface.co/datasets/Khat865/Mutilmodel_fake_news" target="_blank" rel="noopener">Dataset &amp; code</a><a href="#citation">Citation</a></div>
-      <p class="footer-meta">Research use only · <span id="current-year">2026</span></p>
+      <div class="footer-links"><a href="assets/mmfn-paper.pdf" target="_blank" rel="noopener">Paper</a><a href="https://github.com/xiuzhenzhang/Multimodal" target="_blank" rel="noopener">GitHub</a><a href="#access">Access &amp; terms</a><a href="#citation">Citation</a></div>
+      <p class="footer-meta">Non-commercial research only · <span id="current-year">2026</span></p>
     </div>
   </footer>
 
